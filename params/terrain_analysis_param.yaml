@@ -1,0 +1,42 @@
+terrain_analysis:
+  ros__parameters:
+    odom_frame: odom
+    lidar_frame: mid360
+
+    # Voxel and filtering parameters
+    scan_voxel_size: 0.05
+    decay_time: 2.0
+    no_decay_dis: 4.0
+    clearing_dis: 8.0
+
+    # Ground elevation estimation
+    use_sorting: true
+    quantile_z: 0.25
+    consider_drop: false
+    limit_ground_lift: false
+    max_ground_lift: 0.15
+
+    # Dynamic obstacle detection
+    clear_dy_obs: false
+    min_dy_obs_dis: 0.3
+    abs_dy_obs_rel_z_thre: 0.2
+    min_dy_obs_vfov: -16.0
+    max_dy_obs_vfov: 16.0
+    min_dy_obs_point_num: 1
+    min_out_of_fov_point_num: 2
+    obstacle_height_thre: 0.2
+
+    # No-data obstacle generation
+    no_data_obstacle: false
+    no_data_block_skip_num: 0
+    min_block_point_num: 10
+
+    # Vehicle and height parameters
+    vehicle_height: 1.5
+    min_rel_z: -1.5
+    max_rel_z: 0.2
+    dis_ratio_z: 0.2
+
+    # Voxel update parameters
+    voxel_point_update_thre: 100
+    voxel_time_update_thre: 2.0
